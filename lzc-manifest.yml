@@ -7,11 +7,10 @@ application:
   upstreams:
     - location: /
       backend: http://networking-toolbox:3000/
-
 services:
   networking-toolbox:
-    # upstream: lissy93/networking-toolbox:v1.6.0 (docker.io)
-    image: docker.1ms.run/lissy93/networking-toolbox:v1.6.0
+    # upstream: docker.io/lissy93/networking-toolbox:1.6.0
+    image: docker.1ms.run/lissy93/networking-toolbox:1.6.0
     environment:
       - NODE_ENV=production
       - PORT=3000
