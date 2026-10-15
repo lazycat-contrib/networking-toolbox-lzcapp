@@ -1,0 +1,39 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/networking-toolbox.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: networking-toolbox
+
+build:
+  run_buildscript: false
+
+images:
+  - id: networking-toolbox
+    target: service
+    service: networking-toolbox
+    source: docker.io/lissy93/networking-toolbox
+    channel: stable
+    sort: semver
+    tag_regex: '^v?\d+\.\d+\.\d+$'
+    delivery:
+      mode: mirror
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Networking Toolbox
+    summary: "100+ 离线优先的网络工具集"

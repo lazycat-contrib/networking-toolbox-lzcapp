@@ -1,0 +1,15 @@
+package: community.lazycat.app.networking-toolbox
+version: 1.6.0
+name: Networking Toolbox
+description: "100+ offline-first networking tools and utilities"
+min_os_version: 1.5.0
+author: lissy93
+license: MIT
+homepage: https://github.com/lissy93/networking-toolbox
+locales:
+  zh:
+    name: "Networking Toolbox"
+    description: "100+ 离线优先的网络工具集：IP/子网计算、DNS 查询、证书检查、端口参考等，纯前端本地运行"
+  en:
+    name: "Networking Toolbox"
+    description: "100+ offline-first networking tools and utilities"
